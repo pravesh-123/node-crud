@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "test": "mocha"
   },
   "author": "Pravesh Dwivedi",
@@ -20,16 +20,8 @@
     "chai": "^4.3.4",
     "chai-http": "^4.3.0"
   },
-  "directories": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pravesh-123/nodejs-crud.git"
-  },
-  "bugs": {
-    "url": "https://github.com/pravesh-123/nodejs-crud/issues"
-  },
-  "homepage": "https://github.com/pravesh-123/nodejs-crud#readme",
-  "description": ""
+  "engines": {
+    "node": "14.17.0"
+  }
+  
 }
