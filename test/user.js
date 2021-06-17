@@ -74,7 +74,7 @@ describe("User Api", () => {
   /**
    * Test the POST route
    */
-  describe("POST /users", () => {
+  describe("POST /addusers", () => {
     it("It should post a new user", (done) => {
       const user = {
         userName: "Ram",
@@ -83,7 +83,7 @@ describe("User Api", () => {
       };
       chai
         .request("http://localhost:3000")
-        .post("/users")
+        .post("/addusers")
         .send(user)
         .end((err, response) => {
           //response.should.have.status(201);
@@ -103,7 +103,7 @@ describe("User Api", () => {
       };
       chai
         .request("http://localhost:3000")
-        .post("/users")
+        .post("/addusers")
         .send(user)
         .end((err, response) => {
           //response.should.have.status(500);

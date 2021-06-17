@@ -28,7 +28,7 @@ module.exports = (app) => {
 
   /**
    * @swagger
-   * /users:
+   * /addusers:
    *  post:
    *   summary: Creates a new user.
    *   consumes:
@@ -54,7 +54,7 @@ module.exports = (app) => {
    */
 
   // Create a new User
-  app.post("/users", users.create);
+  app.post("/addusers", users.create);
 
   /**
    * @swagger
