@@ -18,6 +18,9 @@ app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(jsDoc));
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to coding world." });
 });
+app.get("/ping", (req, res) => {
+  res.json({ message: "Connection is live" });
+});
 
 require("./app/routes/user.routes.js")(app);
 
