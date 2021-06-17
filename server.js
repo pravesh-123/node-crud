@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerUI = require("swagger-ui-express");
 const swaggerOption = require("./swagger");
+const users = require("./app/controllers/user.controller.js");
 
 const app = express();
 
@@ -20,6 +21,31 @@ app.get("/", (req, res) => {
 });
 
 require("./app/routes/user.routes.js")(app);
+
+/**
+ * @swagger
+ * /users:
+ *  get:
+ *    summary: Get Users
+ *    description: Get all Users
+ *    responses:
+ *        200:
+ *          content:
+ *             application/json:
+ *                schema:
+ *                  type: array
+ *                  properties:
+ *                      id:
+ *                        type: integer
+ *                      userName:
+ *                        type: string
+ *                      password:
+ *                        type: string
+ *                      email:
+ *                        type: string
+ */
+// Retrieve all Users
+app.get("/users", users.findAll);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 3000;
