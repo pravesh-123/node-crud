@@ -1,7 +1,6 @@
 module.exports = {
-  HOST: "localhost",
-
-  USER: "root",
-  PASSWORD: "",
-  DB: "crud_api",
+  HOST: "socialenginespecialist.com",
+  USER: "u811491364_testuser",
+  PASSWORD: "Ude42dA:Bz#1",
+  DB: "u811491364_testuser",
 };
